@@ -3,3 +3,18 @@ body {
     background-repeat: repeat;
 
 }
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+    font-family:inherit;
+    color:blanchedalmond;
+    display: inline-block;
+    border: 2px solid white;
+  
+
+
+
+
+
+}
