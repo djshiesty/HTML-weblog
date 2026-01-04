@@ -1,14 +1,6 @@
-body {
-font-family:Georgia, 'Times New Roman', Times, serif;
-background-image: url(background.png);
-background-repeat: repeat;
-color:white;
-cursor: url(icons8-cursor-48.png) 16 16, auto;
-}
-
 h1 {
     margin-top: 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: 'Slab-Serif', sans-serif;
     text-align: center;
     font-size: 70px;
@@ -18,34 +10,89 @@ h2 {
     text-align: center;
     font-size: 40px;
     margin-bottom: 15px;
-    color: rgb(255, 255, 255);
-}
-
-p, ol, ul, table {
-    list-style-position: inside;
-    text-align:center;
-    font-size: 16px;
-
-}
-
-table {
-    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    width: 60%;
-    margin: 0 auto 10px auto;
 }
 
-ul, ol {
-    padding-left: 20px;
+.Intro_section {
+    margin-left: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    color: rgb(0, 0, 0);
 }
 
-tr, td {
-    border: 1px dotted black;
+.Our_intro {
+    flex: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-right: 200px;
 }
 
-img {
-    border: 2px solid #000000;
-    padding: 1px; 
-    border-radius: 8px; 
-    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px; 
+.Ordered_life {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Table cell look */
+.Ordered_life td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    vertical-align: top;
+}
+
+/* first-child used for column one */
+.Ordered_life td:first-child {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.Ordered_life tr:hover {
+    background-color: #f7f7f7;
+}
+
+.mephoto {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: block;
+}
+
+/* Underline under the Photos heading */
+.Photos_of_AT h3 {
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.Photos_of_AT h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+/* Photo layout */
+.Photo_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 photos per row */
+    gap: 15px;
+    justify-items: center;
+}
+
+.photorow {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
