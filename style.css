@@ -35,22 +35,19 @@ h2 {
     font-size: 1rem;
 }
 
-/* Table cell look */
 .Ordered_life td {
     border: 1px solid #ccc;
     padding: 8px 10px;
     vertical-align: top;
 }
 
-/* first-child used for column one */
 .Ordered_life td:first-child {
     white-space: nowrap;
     font-weight: bold;
 }
 
-/* Hover effect */
 .Ordered_life tr:hover {
-    background-color: #f7f7f7;
+    background-color: #FFFDD0
 }
 
 .mephoto {
@@ -62,12 +59,29 @@ h2 {
     display: block;
 }
 
-/* Underline under the Photos heading */
+.Favorite_Things h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(0,0,0);
+}
+
+.Favorite_Things ul {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.7;
+}
+
+.Photos_of_AT h2,
+.Photos_of_AT h3 {
+    text-align: center;
+}
+
 .Photos_of_AT h3 {
     font-size: 30px;
     color: #000;
     margin-bottom: 20px;
-    text-align: center;
     display: inline-block;
     position: relative;
 }
@@ -82,17 +96,20 @@ h2 {
     background-color: #000;
 }
 
-/* Photo layout */
+/* Grid layout for photos */
 .Photo_section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 photos per row */
-    gap: 15px;
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 20px; /* space between images */
+    max-width: 900px; /* container width */
+    margin: 0 auto 50px auto; /* center grid and add bottom spacing */
 }
 
-.photorow {
-    width: 250px;
+.Photo_section img {
+    width: 100%; /* fill grid cell */
+    max-width: 250px; /* don't exceed 250px */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
+    display: block;
 }
